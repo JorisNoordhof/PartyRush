@@ -1,0 +1,30 @@
+@keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .out-top {
+            animation: rotate 60s ease-in-out infinite; /* Langzamere beweging */
+            transform-origin: 10% 20%;
+        }
+        
+        .in-top {
+            animation: rotate 50s ease-in-out infinite; /* Langzamere beweging */
+            transform-origin: 15% 30%;
+        }
+        
+        .out-bottom {
+            animation: rotate 70s ease-in-out infinite; /* Langzamere beweging */
+            transform-origin: 90% 85%;
+        }
+        
+        .in-bottom {
+            animation: rotate 40s ease-in-out infinite; /* Langzamere beweging */
+            transform-origin: 80% 80%;
+        }
+        
+      

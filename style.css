@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'PRFont';
+    src: url('./src/font/fonnts.com-Kaneda_Gothic_Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'PRFont', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
