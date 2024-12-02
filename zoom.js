@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         //scale: 0.6667,
         scale: 600,
         opacity: 0,
+        // display: 'none',
         force3D:false,
         scrollTrigger: {
             trigger: "#ScaleUpContainer",
@@ -44,7 +45,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // Scale en Pin instellingen
     gsap.to(".scaleDown", {
         //scale: 0.6667,
-        scale: 0.2,
+        scale: 0.6,
         //scale: 30,
         force3D:false,
         scrollTrigger: {
