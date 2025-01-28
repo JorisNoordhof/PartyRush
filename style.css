@@ -3,7 +3,18 @@
     src: url('./src/font/fonnts.com-Kaneda_Gothic_Bold.otf');
     font-weight: normal;
     font-style: normal;
+    size-adjust: 120%;
+
 }
+
+html {
+    scroll-behavior: smooth;
+}
+img {
+	user-drag: none;
+	-webkit-user-drag: none;
+	-moz-user-select: none;
+  }
 
 * {
     font-family: 'PRFont', sans-serif;
@@ -11,3 +22,31 @@
     font-style: normal;
 }
 
+/* Standaard stijlen voor desktop en grotere schermen */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+
+}
+
+.container {
+    max-width: 100%; /* Zorg ervoor dat je container zich aanpast aan de schermgrootte */
+}
+
+/* Media query voor mobiele apparaten */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px; /* Kleinere tekst voor kleinere schermen */
+    }
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px; /* Voeg padding toe om het scherm niet te 'wringen' */
+    }
+
+    /* Zorg ervoor dat elementen goed schalen op mobiele apparaten */
+
+
+    /* Specifieke elementen die problemen kunnen veroorzaken */
+ 
+}

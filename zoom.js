@@ -1,89 +1,103 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-    const locoScroll = new LocomotiveScroll({
-        el: document.querySelector("[data-scroll-container]"),
-        smooth: true
-    });
-
+document.addEventListener("DOMContentLoaded", () => {
+    // GSAP ScrollTrigger setup
     gsap.registerPlugin(ScrollTrigger);
 
-    // Synchronisatie tussen LocomotiveScroll en ScrollTrigger
-    locoScroll.on("scroll", ScrollTrigger.update);
-    ScrollTrigger.scrollerProxy("[data-scroll-container]", {
-        scrollTop(value) {
-            return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-        },
-        getBoundingClientRect() {
-            return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-        },
-        //pinType: document.querySelector("[data-scroll-container]").style.transform ? "transform" : "fixed"
-    });
-
-    // Zet de initiële positie van scaleDown
-    gsap.set(".scaleUp", { xPercent: -50, yPercent: -50 });
-
-    // Scale en Pin instellingen
+    // Scale-up effect
+    //gsap.set(".scaleUp", { xPercent: -50, yPercent: -50 });
     gsap.to(".scaleUp", {
-        //scale: 0.6667,
         scale: 600,
-        opacity: 0,
-        // display: 'none',
-        force3D:false,
+        //opacity: 0,
+        force3D: false,
+        transformOrigin: "50% 64%", // Verplaats het inzoompunt iets lager
         scrollTrigger: {
             trigger: "#ScaleUpContainer",
-            scroller: "[data-scroll-container]", // Specificeer de scrollcontainer
-            pin: true, // Zorg dat #ScaleDownContainer vastgeplakt blijft
-            scrub: true, // Maak de animatie vloeiend met de scroll
-            start: "top top", // Begin de pinning direct aan de top van de viewport
-            end: "+=100%", // Laat de pin los na de volledige hoogte van het element
-            // markers: true, // Debug-markers om start en eind te visualiseren
-            invalidateOnRefresh: true // Zorg dat het altijd wordt geüpdatet bij refresh
-        }
+            pin: true,
+            scrub: true,
+            start: "top top",
+            end: "+=500%",
+            invalidateOnRefresh: true,
+        },
+        onComplete: () => {
+            // Verwijder het element uit de DOM
+            //document.querySelector(".scaleUp").style.opacity = 0;
+            // Of je kunt de visibility aanpassen als je het element niet helemaal wilt verwijderen
+            // document.querySelector(".scaleUp").style.visibility = 'hidden';
+        },
     });
 
+    // Scale-down effect
     gsap.set(".scaleDown", { xPercent: -50, yPercent: -50 });
-
-    // Scale en Pin instellingen
     gsap.to(".scaleDown", {
-        //scale: 0.6667,
         scale: 0.6,
-        //scale: 30,
-        force3D:false,
+        force3D: false,
         scrollTrigger: {
             trigger: "#ScaleDownContainer",
-            scroller: "[data-scroll-container]", // Specificeer de scrollcontainer
-            pin: true, // Zorg dat #ScaleDownContainer vastgeplakt blijft
-            scrub: true, // Maak de animatie vloeiend met de scroll
-            start: "top top", // Begin de pinning direct aan de top van de viewport
-            end: "+=100%", // Laat de pin los na de volledige hoogte van het element
-            // markers: true, // Debug-markers om start en eind te visualiseren
-            invalidateOnRefresh: true // Zorg dat het altijd wordt geüpdatet bij refresh
-        }
+            pin: true,
+            scrub: true,
+            start: "top top",
+            end: "+=100%",
+            invalidateOnRefresh: true,
+        },
     });
 
-    // Fade functie
-    function fadeOutOnScroll(element, args) {
-        if (!element) return;
+    // Fade-out effect on scroll
+    ScrollTrigger.create({
+        onUpdate: (self) => {
+            const header = document.getElementById("opening");
+            if (header) {
+                const distanceToTop = 100;
+                const elementHeight = header.offsetHeight / 4;
+                let opacity = 1;
 
-        const distanceToTop = 100;
-        const elementHeight = element.offsetHeight / 4;
-        const scrollTop = args.scroll.y;
-        let opacity = 1;
+                if (self.scroll.y > distanceToTop) {
+                    opacity = 1 - (self.scroll.y - distanceToTop) / elementHeight;
+                }
 
-        if (scrollTop > distanceToTop) {
-            opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
-        }
-
-        if (opacity >= 0) {
-            element.style.opacity = opacity;
-        }
-    }
-
-    // Toepassen van fade bij scrollen
-    locoScroll.on("scroll", (args) => {
-        const header = document.getElementById('opening');
-        fadeOutOnScroll(header, args);
+                header.style.opacity = opacity > 0 ? opacity : 0;
+            }
+        },
     });
 
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-    ScrollTrigger.refresh();
+    // Stack-effect integratie
+    const scaleMax = gsap.utils.mapRange(1, document.querySelectorAll(".stack").length - 1, 0.8, 1);
+    const time = 2;
+
+    // Stel de initiële positie van de kaarten in
+    gsap.set(".stack", {
+        y: (index) => 10 * index,
+        transformStyle: "preserve-3d",
+        transformOrigin: "center top",
+    });
+
+    // Stack-effect ScrollTrigger
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "section", // Het section-element voor het stack-effect
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+            pin: true,
+            markers: false, // Debug-markers, zet op true indien nodig
+        },
+    });
+
+    // Laat de kaarten omhoog bewegen
+    tl.from(".stack", {
+        y: () => window.innerHeight,
+        duration: time / 2,
+        stagger: time,
+    });
+
+    // Voeg de stack-effectanimatie toe
+    tl.to(
+        ".stack:not(:last-child)",
+        {
+            rotationX: -20,
+            scale: (index) => scaleMax(index),
+            stagger: {
+                each: time,
+            },
+        },
+        time
+    );
 });
