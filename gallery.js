@@ -2,39 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // GSAP ScrollTrigger setup
     gsap.registerPlugin(ScrollTrigger);
 
-    // Scale-up effect
-    gsap.to(".scaleUp", {
-        scale: 600,
-        force3D: false,
-        transformOrigin: "50% 64%",
-        scrollTrigger: {
-            trigger: "#ScaleUpContainer",
-            pin: true,
-            scrub: true,
-            start: "top top",
-            end: "+=500%",
-            invalidateOnRefresh: true,
-        }
-    });
-
-    // Fade-out effect on scroll
-    ScrollTrigger.create({
-        onUpdate: (self) => {
-            const header = document.getElementById("opening");
-            if (header) {
-                const distanceToTop = 100;
-                const elementHeight = header.offsetHeight / 4;
-                let opacity = 1;
-
-                if (self.scroll.y > distanceToTop) {
-                    opacity = 1 - (self.scroll.y - distanceToTop) / elementHeight;
-                }
-
-                header.style.opacity = opacity > 0 ? opacity : 0;
-            }
-        },
-    });
-
     // Stack-effect integratie
     const time = 2;
 

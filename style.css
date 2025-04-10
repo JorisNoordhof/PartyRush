@@ -7,6 +7,22 @@
 
 }
 
+.prButton {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    transition: all 0.3s ease !important;
+}
+
+.prButton:hover {
+    background-color: #ffa200 !important;
+    color: #fff !important;
+}
+
+
+
 html {
     scroll-behavior: smooth;
 }
