@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en" class="h-100" data-bs-theme="light">
 
 <head>
@@ -9,14 +10,8 @@
     <meta name="generator" content="Hugo 0.122.0">
     <title>PartyRush - lets get wild</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link rel="stylesheet" href="/collage.css">
-    <link rel="stylesheet" href="/zoom.css">
-    <link rel="stylesheet" href="/socials.css">
-    <link rel="stylesheet" href="/style.css">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">ƒ
@@ -26,6 +21,36 @@
     <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
     <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
     <meta name="theme-color" content="#ffa200">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+        @media (max-width: 768px) {
+            .navbar-nav .nav-link {
+                font-size: 1.2rem !important;
+            }
+            .logo img {
+                max-height: 200px !important;
+            }
+            .display-4 {
+                font-size: 2rem !important;
+            }
+            .card-container {
+                flex-direction: column !important;
+            }
+            .image-container {
+                max-width: 100% !important;
+            }
+            .text-container {
+                padding: 1rem !important;
+            }
+            .text-container h1 {
+                font-size: 1.5rem !important;
+            }
+            .text-container p {
+                font-size: 1rem !important;
+            }
+        }
+    </style> -->
 </head>
 
 <body class="bg-black">
@@ -41,13 +66,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-light fs-5">Home</a>
+                        <a href="#" class="nav-link text-light">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#Releases" class="nav-link text-light fs-5">Releases</a>
+                        <a href="#Releases" class="nav-link text-light">Releases</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#Gallery" class="nav-link text-light fs-5">Gallery</a>
+                        <a href="#Gallery" class="nav-link text-light">Gallery</a>
                     </li>
                 </ul>
                 <div class="d-flex">
@@ -57,55 +82,54 @@
         </div>
     </nav>
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column my-auto">
-        <main class="px-3">
+    <div class="position-relative cover-container d-flex w-100 vh-100 p-3 mx-auto flex-column my-auto">
+        <main class="px-3 d-flex align-items-center justify-content-center" style="height: 100vh;">
             <!-- Banner Afbeelding -->
             <img id="opening" class="img-fluid position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
-                src="./src/img/headbanner.jpg" alt="Head Banner" width="500">
+                src="./src/img/headbanner.jpg" alt="Head Banner">
 
             <!-- Content boven de afbeelding -->
-            <div class="container text-center d-flex flex-column justify-content-center align-items-center h-100 position-relative"
+            <div class="container text-center d-flex flex-column justify-content-center align-items-center position-relative"
                 style="z-index: 10;">
                 <!-- Logo -->
-                <div id="logo" class="logo">
-                    <img data-scroll data-scroll-speed="5" class="img-fluid mb-4" src="./src/logo/logotransparant.png"
+                <div id="logo" class="logo mb-4">
+                    <img data-scroll data-scroll-speed="5" class="img-fluid" src="./src/logo/logotransparant.png"
                         alt="Transparent Logo" style="max-height: 400px;">
                 </div>
 
                 <!-- Titel -->
-                <h1 data-scroll data-scroll-speed="4" class="display-4 text-warning fw-bold text-uppercase text-center"
-                    style="-webkit-text-stroke: 1px black;">
+                <h1 data-scroll data-scroll-speed="4" class="display-4 text-warning text-uppercase text-center" style="text-shadow: 0 0 10px black;">
                     Let's get wild
                 </h1>
             </div>
         </main>
     </div>
 
-
-    <div id="Releases" class="cover-container d-flex w-100 vh-100 mx-auto flex-column">
-        <h1 class="display-3 text-center text-light position-sticky top-0 z-1" style="padding-top: 100px;"> 
+    <div id="Releases" class="position-relative cover-container d-flex w-100 mx-auto flex-column">
+        <!-- <h1 class="text-center text-light position-sticky top-0 z-3 fw-bolder" 
+            style="backdrop-filter: blur(8px); background: rgba(0, 0, 0, 0.4); margin: 0; padding: 100px 20px 20px 20px;"> 
             <b style="text-decoration: underline; text-decoration-color: #ffa200;">PartyRush</b> Releases
-        </h1>
+        </h1> -->
 
-        <section class="d-flex justify-content-center align-items-center"
-            style="height: 150vh; position: relative; overflow: hidden; 
-             background-size:cover; background-repeat: no-repeat; background-position: center;" 
-            >
-            <ul class="cards position-relative d-grid w-100 h-100 text-light mt-5 container">
+        <h4 class="text-center text-light position-sticky top-0 z-3 fw-bolder" 
+            style="backdrop-filter: blur(8px); background: rgba(0, 0, 0, 0.6); margin: 0; padding: 100px 20px 20px 20px; font-size: clamp(2rem, 5vw, 4rem);"> 
+            <b style="text-decoration: underline; text-decoration-color: #ffa200; text-decoration-thickness: 3px;">PartyRush</b> Releases
+        </h4>
+
+        <section id="ReleasesScroll" class="d-flex justify-content-center align-items-center py-5 mt-4"
+            style="position: relative; overflow: hidden; background-size:cover; background-repeat: no-repeat; background-position: center;"> 
+            <ul class="cards w-100 text-light container d-flex flex-column gap-4">
                 <!-- Eerste kaart -->
-                <li class="card bg-transparent stack position-absolute panel container"
-                style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+                <li class="card bg-transparent">
                     <div class="card-container bg-black rounded-4 shadow-lg text-light d-flex flex-column flex-md-row-reverse overflow-hidden"
-                        style="max-width: 1200px; width: 100%; border: 0px solid #ffa200;">
+                        style="max-width: 1200px; width: 100%; margin: 0 auto; border: 0px solid #ffa200;">
                 
-                        <!-- Afbeelding -->
                         <div class="image-container d-flex justify-content-center align-items-center p-2" style="width: 100%; max-width: 400px;">
                             <img class="rounded-3 border border-secondary w-100" 
                                 src="https://i1.sndcdn.com/artworks-nxujaMnWXfhEjApK-pzZD5A-t500x500.jpg"
                                 alt="Wake Me Up">
                         </div>
 
-                        <!-- Tekst -->
                         <div class="text-container d-flex flex-column justify-content-center p-4"
                             style="backdrop-filter: blur(8px); background: rgba(0, 0, 0, 0.4); width: 100%;">
                             <h1 class="text-center display-4 display-md-1 mb-3">Watch Out For This Fogo (PartyRush Mashup)</h1>
@@ -116,19 +140,16 @@
                 </li>
             
                 <!-- Tweede kaart -->
-                <li class="card bg-transparent stack position-absolute panel container"
-                style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+                <li class="card bg-transparent">
                     <div class="card-container bg-black rounded-4 shadow-lg text-light d-flex flex-column flex-md-row-reverse overflow-hidden"
-                        style="max-width: 1200px; width: 100%; border: 0px solid #ffa200;">
+                        style="max-width: 1200px; width: 100%; margin: 0 auto; border: 0px solid #ffa200;">
                 
-                        <!-- Afbeelding -->
                         <div class="image-container d-flex justify-content-center align-items-center p-2" style="width: 100%; max-width: 400px;">
                             <img class="rounded-3 border border-secondary w-100" 
                                 src="https://i1.sndcdn.com/artworks-We3hZEVa91NdbgAZ-jLd9nA-t500x500.jpg"
                                 alt="Wake Me Up">
                         </div>
 
-                        <!-- Tekst -->
                         <div class="text-container d-flex flex-column justify-content-center p-4"
                             style="backdrop-filter: blur(8px); background: rgba(0, 0, 0, 0.4); width: 100%;">
                             <h1 class="text-center display-4 display-md-1 mb-3">Ray Of Solar vs Starships (PartyRush Mashup)</h1>
@@ -138,21 +159,17 @@
                     </div>
                 </li>
 
-
                 <!-- Derde kaart -->
-                <li class="card bg-transparent stack position-absolute panel container"
-                style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+                <li class="card bg-transparent">
                     <div class="card-container bg-black rounded-4 shadow-lg text-light d-flex flex-column flex-md-row-reverse overflow-hidden"
-                        style="max-width: 1200px; width: 100%; border: 0px solid #ffa200;">
+                        style="max-width: 1200px; width: 100%; margin: 0 auto; border: 0px solid #ffa200;">
                 
-                        <!-- Afbeelding -->
                         <div class="image-container d-flex justify-content-center align-items-center p-2" style="width: 100%; max-width: 400px;">
                             <img class="rounded-3 border border-secondary w-100" 
                                 src="https://i1.sndcdn.com/artworks-Iu35d32CyRZmxYKI-BSlS1w-t500x500.jpg"
                                 alt="Wake Me Up">
                         </div>
 
-                        <!-- Tekst -->
                         <div class="text-container d-flex flex-column justify-content-center p-4"
                             style="backdrop-filter: blur(8px); background: rgba(0, 0, 0, 0.4); width: 100%;">
                             <h1 class="text-center display-4 display-md-1 mb-3">De manier vs La Boa (PartyRush Mashup)</h1>
@@ -161,83 +178,77 @@
                         </div>
                     </div>
                 </li>
-
             </ul>
         </section>
     </div>
 
-    <!-- <div class="container cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-</div> -->
-
-    <div class="container cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    </div>
-
-    <div style="pointer-events: none; overflow: hidden;" class="container cover-container d-flex w-100 h-100 mx-auto flex-column mb-5">
+    <div style="pointer-events: none; overflow: visible;" class="position-relative container cover-container d-flex w-100 mx-auto flex-column">
         <div id="ScaleUpContainer" class="d-flex justify-content-center align-items-center"
-            style="height: 100vh; z-index: 1000; position: relative;">
+            style="height: 100vh; z-index: 9999; position: relative;">
             <div class="scaleUp" style="pointer-events: none;">
-                <img class="d-block mx-auto" src="Logo.svg" alt="" height="300">
+                <img class="d-block mx-auto" src="./src/logo/logo.svg" alt="" height="300">
             </div>
         </div>
     </div>
 
-    <div id="Gallery" class="position-relative container cover-container d-flex vh-100 w-100 p-0 mx-auto flex-column">
-        <h1 class="display-3 text-center text-light position-sticky top-0 z-3" style="padding-top: 100px;"> 
-            <b style="text-decoration: underline; text-decoration-color: #ffa200;">PartyRush</b> Gallery
-        </h1>
+    <div id="Gallery" class="position-relative cover-container d-flex w-100 mx-auto flex-column" style="margin-top: 100vh;">
+        <h4 class="text-center text-light position-sticky top-0 z-3 fw-bolder" 
+            style="backdrop-filter: blur(8px); background: rgba(0, 0, 0, 0.6); margin: 0; padding: 100px 20px 20px 20px; font-size: clamp(2rem, 5vw, 4rem);"> 
+            <b style="text-decoration: underline; text-decoration-color: #ffa200; text-decoration-thickness: 3px;">PartyRush</b> Gallery
+        </h4>
 
         <section class="d-flex justify-content-center align-items-center"
-            style="height: 800vh; position: relative; overflow: hidden; padding-top: 100px;">
-            <div class="cards position-relative d-grid w-100 h-100 text-light mt-5 container">
+            style="min-height: 100vh; position: relative; overflow: hidden; padding-top: 100px;">
+            <div class="cards position-relative d-grid w-100 text-light container">
                 <!-- First row -->
-                <div class="bg-transparent gallery-stack position-absolute container"
-                    style="height: 200vh; display: flex; justify-content: center; align-items:start; padding-top: 100px;">
-                    <div class="row row-cols-1 row-cols-lg-3 g-4">
-                        <!-- First image - visible on both mobile and desktop -->
+                <div class="gallery-stack container mb-5">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                         <div class="col">
-                            <img src="/src/img/fotos/01.jpg" alt="Gallery image 1" class="img-fluid rounded-4 shadow-lg"
-                                style="width: 100%; max-width: 500px; object-fit: cover;">
+                            <img src="/src/img/fotos/01.jpg" alt="Gallery image 1" 
+                                class="img-fluid rounded-4 shadow-lg w-100 h-100"
+                                style="object-fit: cover; max-height: 400px;">
                         </div>
-                        <!-- Second and third images - only visible on desktop -->
-                        <div class="col d-lg-block">
-                            <img src="/src/img/fotos/02.jpg" alt="Gallery image 2" class="img-fluid rounded-4 shadow-lg"
-                                style="width: 100%; object-fit: cover;">
+                        <div class="col">
+                            <img src="/src/img/fotos/02.jpg" alt="Gallery image 2" 
+                                class="img-fluid rounded-4 shadow-lg w-100 h-100"
+                                style="object-fit: cover; max-height: 400px;">
                         </div>
-                        <div class="col d-lg-block">
-                            <img src="/src/img/fotos/03.jpg" alt="Gallery image 3" class="img-fluid rounded-4 shadow-lg"
-                                style="width: 100%; object-fit: cover;">
+                        <div class="col">
+                            <img src="/src/img/fotos/03.jpg" alt="Gallery image 3" 
+                                class="img-fluid rounded-4 shadow-lg w-100 h-100"
+                                style="object-fit: cover; max-height: 400px;">
                         </div>
                     </div>
                 </div>
 
                 <!-- Second row -->
-                <div class="bg-transparent gallery-stack position-absolute container"
-                    style="height: 200vh; display: flex; justify-content: center; align-items: start; padding-top: 100px;">
-                    <div class="row row-cols-1 row-cols-lg-3 g-4">
-                        <!-- First image - visible on both mobile and desktop -->
+                <div class="gallery-stack container mb-5">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                         <div class="col">
-                            <img src="/src/img/fotos/04.jpg" alt="Gallery image 1" class="img-fluid rounded-4 shadow-lg"
-                                style="width: 100%; max-width: 500px; object-fit: cover;">
+                            <img src="/src/img/fotos/04.jpg" alt="Gallery image 4" 
+                                class="img-fluid rounded-4 shadow-lg w-100 h-100"
+                                style="object-fit: cover; max-height: 400px;">
                         </div>
-                        <!-- Second and third images - only visible on desktop -->
-                        <div class="col d-block">
-                            <img src="/src/img/fotos/05.jpg" alt="Gallery image 2" class="img-fluid rounded-4 shadow-lg"
-                                style="width: 100%; object-fit: cover;">
+                        <div class="col">
+                            <img src="/src/img/fotos/05.jpg" alt="Gallery image 5" 
+                                class="img-fluid rounded-4 shadow-lg w-100 h-100"
+                                style="object-fit: cover; max-height: 400px;">
                         </div>
-                        <div class="col d-block">
-                            <img src="/src/img/fotos/06.jpg" alt="Gallery image 3" class="img-fluid rounded-4 shadow-lg"
-                                style="width: 100%; object-fit: cover;">
+                        <div class="col">
+                            <img src="/src/img/fotos/06.jpg" alt="Gallery image 6" 
+                                class="img-fluid rounded-4 shadow-lg w-100 h-100"
+                                style="object-fit: cover; max-height: 400px;">
                         </div>
                     </div>
                 </div>
 
                 <!-- Third row - full width image -->
-                <div class="bg-transparent gallery-stack position-absolute container"
-                    style="height: 200vh; display: flex; justify-content: center; align-items: start; padding-top: 100px;">
-                    <div class="row row-cols-1 row-cols-lg-1 g-4">
-                        <div class="col">
-                            <img src="/src/img/fotos/072.jpg" alt="Gallery image 7" class="img-fluid rounded-4 shadow-lg"
-                                style="width: 100%;object-position: 50% 100%;">
+                <div class="gallery-stack container mb-5">
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="/src/img/fotos/072.jpg" alt="Gallery image 7" 
+                                class="img-fluid rounded-4 shadow-lg w-100"
+                                style="object-fit: cover; max-height: 600px;">
                         </div>
                     </div>
                 </div>
@@ -245,101 +256,8 @@
         </section>
     </div>
 
-
-    <!-- <div class="position-relative container cover-container d-flex w-100 p-3 mx-auto flex-column" style="margin-top: 100vh;">
-        <h1 class="display-3 mb-5 text-center text-light">
-            <b style="text-decoration: underline; text-decoration-color: #ffa200;">PartyRush</b> Upcoming shows
-        </h1>
-
-
-        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                    style="background-image: url(/src/img/fotos/01.jpg); background-size: cover;">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                        <h2 class="pt-5 mt-5 mb-4 display-2 lh-1 fw-bold">Show 1</h2>
-                        <ul class="d-flex list-unstyled mt-auto">
-                            <li class="me-auto">
-                                <img src="/src/logo/logonobackground.png" alt="Bootstrap" width="32" height="32"
-                                    class="rounded-circle border border-white">
-                            </li>
-                            <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#geo-fill"></use>
-                                </svg>
-                                <small>Kampen</small>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#calendar3"></use>
-                                </svg>
-                                <small></small>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                    style="background-image: url(/src/img/fotos/02.jpg); background-size: cover;">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                        <h2 class="pt-5 mt-5 mb-4 display-2 lh-1 fw-bold">Show 2</h2>
-                        <ul class="d-flex list-unstyled mt-auto">
-                            <li class="me-auto">
-                                <img src="/src/logo/logonobackground.png" alt="Bootstrap" width="32" height="32"
-                                    class="rounded-circle border border-white">
-                            </li>
-                            <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#geo-fill"></use>
-                                </svg>
-                                <small>Kampen</small>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#calendar3"></use>
-                                </svg>
-                                <small></small>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
-                    style="background-image: url(/src/img/fotos/03.jpg); background-size: cover;">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                        <h1 class="pt-5 mt-5 mb-4 display-2 lh-1 fw-bold">Show 3</h1>
-                        <ul class="d-flex list-unstyled mt-auto">
-                            <li class="me-auto">
-                                <img src="/src/logo/logonobackground.png" alt="Bootstrap" width="32" height="32"
-                                    class="rounded-circle border border-white">
-                            </li>
-                            <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#geo-fill"></use>
-                                </svg>
-                                <small>Kampen</small>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em">
-                                    <use xlink:href="#calendar3"></use>
-                                </svg>
-                                <small></small>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
-
-
     <!-- BIJ HET TOEVOEGEN VAN UPCOMING SHOWS SECTIE DE STYLE ATTR VAN ONDERSTAANDE CONTACT ELEMENT VERWIJDEREN -->
-    <div id="Contact" data-scroll-section class="container-fluid d-flex flex-column bg-white text-dark pt-5" style="margin-top: 100vh;">
+    <div id="Contact" data-scroll-section class="container-fluid d-flex flex-column bg-white text-dark pt-5">
         <h3 class="text-center mb-3">Tot slot</h3>
         <h1 class="display-4 display-md-1 text-center mb-1">
             Wij zijn <b style="text-decoration: underline; text-decoration-color: #ffa200;">PartyRush</b>
@@ -353,7 +271,7 @@
                         <div class="align-items-center">
                             <img src="/src/logo/logonobackground.png" class="img-fluid" style="max-width: 250px; width: 100%;" alt="PartyRush Logo" />
                         </div>
-                        <h5 class="mt-3">PartyRush</h5>
+                        <h1 class="mt-3">PartyRush</h1>
                         <ul class="nav flex-column text-center text-md-start">
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Wij zijn PartyRush</a></li>
@@ -365,8 +283,8 @@
                     <!-- Newsletter Section -->
                     <div class="col-12 col-md-6 mb-4 mb-md-0 text-center mt-4 text-md-start">
                         <form id="newsletterForm">
-                            <h2 class="mb-3">Schrijf je in voor onze nieuwsbrief!</h2>
-                            <h5 class="mb-4">Blijf op de hoogte van upcoming events, nieuwe releases en veel meer.</h5>
+                            <h2 class="mb-3 fs-1">Schrijf je in voor onze nieuwsbrief!</h2>
+                            <h5 class="mb-4 fs-3">Blijf op de hoogte van upcoming events, nieuwe releases en veel meer.</h5>
                             <div class="d-flex flex-column flex-sm-row w-100 gap-3">
                                 <label for="newsletter1" class="visually-hidden">Email adres</label>
                                 <input id="newsletter1" type="email" name="email" class="form-control" placeholder="Email adres" required>
@@ -391,21 +309,121 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            gsap.registerPlugin(ScrollTrigger);
 
-    </div>
+            // Initial setup - position cards
+            gsap.set(".card", {
+                position: "relative",
+                opacity: 1
+            });
 
-    </div>
+            // Create the stacking animation
+            const cards = document.querySelectorAll(".card");
+            const cardHeight = cards[0].offsetHeight;
+
+            // Set initial z-indexes (first card lowest, last card highest)
+            cards.forEach((card, index) => {
+                card.style.zIndex = index + 1;
+            });
+
+            // Create a timeline for smooth animation
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#ReleasesScroll",
+                    start: "top top+=100",
+                    end: "bottom bottom",
+                    scrub: 0.5,
+                    pin: true,
+                    anticipatePin: 1,
+                    markers: false
+                }
+            });
+
+            // Add cards to timeline with sequential stacking
+            cards.forEach((card, index) => {
+                if (index === 0) {
+                    // First card just moves up
+                    tl.to(card, {
+                        y: 0,
+                        duration: 1,
+                        ease: "power1.inOut"
+                    });
+                } else {
+                    // Subsequent cards wait for previous card and align with it
+                    tl.to(card, {
+                        y: -cardHeight * index,
+                        duration: 1,
+                        ease: "power1.inOut"
+                    }, ">"); // This makes it wait for the previous animation to complete
+                }
+            });
+
+            // Add smooth scroll behavior to the container
+            document.querySelector("#ReleasesScroll").style.scrollBehavior = "smooth";
+        });
+    </script>
+    <script>
+        // Second script for logo zoom effect
+        window.addEventListener('load', function() {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Initial setup
+            gsap.set(".scaleUp img", {
+                scale: 1,
+                transformOrigin: "center center",
+                opacity: 1
+            });
+
+            // Create the zoom animation
+            gsap.to(".scaleUp img", {
+                scrollTrigger: {
+                    trigger: "#ScaleUpContainer",
+                    start: "center center",
+                    end: "+=100%",
+                    scrub: 1,
+                    markers: false,
+                    onUpdate: (self) => {
+                        // Calculate zoom based on progress
+                        const scale = 1 + (self.progress * 499); // Scale up to 500x
+                        
+                        // Fade out when zoom is complete
+                        const opacity = self.progress >= 0.99 ? 0 : 1;
+                        
+                        // Make container fixed when animation starts
+                        if (self.progress > 0) {
+                            gsap.set("#ScaleUpContainer", {
+                                position: "fixed",
+                                top: 0,
+                                left: 0,
+                                right: 0,
+                                bottom: 0,
+                                width: "100vw",
+                                height: "100vh"
+                            });
+                        } else {
+                            gsap.set("#ScaleUpContainer", {
+                                position: "relative",
+                                width: "100%",
+                                height: "100vh"
+                            });
+                        }
+                        
+                        gsap.set(".scaleUp img", { 
+                            scale: scale,
+                            zIndex: 9999,
+                            transformOrigin: "50% 64%",
+                            opacity: opacity
+                        });
+                    }
+                },
+                ease: "none"
+            });
+        });
+    </script>
 </body>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="./src/scroll/locomotive-scroll.min.js"></script>
-<script src="./zoom.js"></script>
-<script src="./stack.js"></script>
-<script src="newsletter.js"></script>
-<script src="navbar.js"></script>
-
 </html>
